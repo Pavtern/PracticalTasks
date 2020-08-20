@@ -1,7 +1,7 @@
 package TaskSubtaskCategory;
 
 public class Category {
-    private String[] nameOfCategory = {"Work", "Health", "Life", "Sport"};
+    private String[] nameOfCategory = {"Work", "Health", "Life"};
 
     public String getThirdCategory() {
         return nameOfCategory[2];
