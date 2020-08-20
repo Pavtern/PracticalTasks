@@ -9,6 +9,10 @@ public class Category {
 
     public String getName() {
         String a = "";
+        /*
+        Далее сделал все так сложно для того, чтобы можно было добавлять новые
+        категории и использовать каждую категорию по отдельности.
+         */
         for (int i = 0; i < nameOfCategory.length; i++) {
             if(i <= nameOfCategory.length-3) {
                 a += nameOfCategory[i] + ", ";
