@@ -18,14 +18,17 @@ public class Main {
         System.out.println(category.getName());
         String Category = in.nextLine();
         System.out.println("Great! We create this task:");
-        System.out.println("Task: " + Task);
-        System.out.println("Subtusk: " + Subtask);
+        System.out.println("");
+        System.out.println("Task:     " + Task);
+        System.out.println("Subtusk:  " + Subtask);
         System.out.println("Category: " + Category);
+        System.out.println("");
         System.out.println("We also have another task for tomorrow:");
+        System.out.println("");
         Task task = new Task();
-        System.out.println("Task: " + task.getNameOfTask());
+        System.out.println("Task:     " + task.getNameOfTask());
         Subtask subtask = new Subtask();
-        System.out.println("Subtusk: " + subtask.getNameOfSubstring());
+        System.out.println("Subtusk:  " + subtask.getNameOfSubstring());
         System.out.println("Category: " + category.getThirdCategory());
 
     }
