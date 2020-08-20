@@ -1,30 +1,30 @@
 package TaskSubtaskCategory;
 
 public class Category {
-    private String[] nameOfCategory = {"Work", "Health", "Life"};
+    private String[] nameOfCategory = {"Work", "Health", "Life", "Sport"};
 
     public String getThirdCategory() {
         return nameOfCategory[2];
     }
 
     public String getName() {
-        String a = "";
+        String listOfCategory = "";
         /*
         Далее сделал все так сложно для того, чтобы можно было добавлять новые
         категории и использовать каждую категорию по отдельности.
          */
         for (int i = 0; i < nameOfCategory.length; i++) {
             if(i <= nameOfCategory.length-3) {
-                a += nameOfCategory[i] + ", ";
+                listOfCategory += nameOfCategory[i] + ", ";
             }
             if(i == nameOfCategory.length-2) {
-                a += nameOfCategory[i] + " or ";
+                listOfCategory += nameOfCategory[i] + " or ";
             }
             if(i == nameOfCategory.length-1) {
-                a += nameOfCategory[i] + "?";
+                listOfCategory += nameOfCategory[i] + "?";
             }
 
         }
-        return a;
+        return listOfCategory;
     }
 }
