@@ -17,7 +17,7 @@ public class Main {
         Category category = new Category();
         System.out.println(category.getName());
         String Category = in.nextLine();
-        System.out.println("Great! We create this task:");
+        System.out.println("Great! We created this task:");
         System.out.println("");
         System.out.println("Task:     " + Task);
         System.out.println("Subtusk:  " + Subtask);
