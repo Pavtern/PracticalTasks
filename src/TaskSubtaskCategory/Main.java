@@ -15,7 +15,7 @@ public class Main {
         System.out.println("It makes sense.");
         System.out.println("So, in which category we can put this task?");
         Category category = new Category();
-        System.out.println(category.getName());
+        System.out.println(category.getName()); //Я сначала сделал с toString, но мне не понравились скобки и запятые
         String Category = in.nextLine();
         System.out.println("Great! We created this task:");
         System.out.println("");
