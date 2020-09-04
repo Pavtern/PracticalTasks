@@ -1,9 +1,13 @@
 package TaskSubtaskCategory;
 
 public class Subtask {
-    private String nameOfSubstring = "Call my friends";
+    private String nameOfSubtask;
 
-    public String getNameOfSubstring() {
-        return nameOfSubstring;
+    public void setNameOfSubtask(String nameOfSubtask) {
+        this.nameOfSubtask = nameOfSubtask;
+    }
+
+    public String getNameOfSubtask() {
+        return nameOfSubtask;
     }
 }
