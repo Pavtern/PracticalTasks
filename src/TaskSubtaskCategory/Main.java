@@ -10,9 +10,9 @@ public class Main {
         Category category1 = InCategory.read();
         System.out.println("Great! We created this task:");
         System.out.println("");
-        System.out.println("Task:     " + Task);
-        System.out.println("Subtask:  " + Subtask);
-        System.out.println("Category: " + Category);
+        System.out.println("Task:     " + task1);
+        System.out.println("Subtask:  " + subtask1);
+        System.out.println("Category: " + category1);
         System.out.println("");
 
     }

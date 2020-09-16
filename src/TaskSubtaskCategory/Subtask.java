@@ -10,4 +10,9 @@ public class Subtask {
     public String getNameOfSubtask() {
         return nameOfSubtask;
     }
+
+    @Override
+    public String toString() {
+        return nameOfSubtask + ".";
+    }
 }

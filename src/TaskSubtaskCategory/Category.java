@@ -11,4 +11,9 @@ public class Category {
         return nameOfCategory;
     }
 
+    @Override
+    public String toString() {
+        return nameOfCategory + ".";
+    }
+
 }
