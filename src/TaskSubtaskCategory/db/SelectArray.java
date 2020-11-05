@@ -29,9 +29,13 @@ public class SelectArray {
                 System.out.print(" - ");
                 System.out.println(rs.getString("idCategory1"));
 
-                array.add(rs.getString("name"));
-                return array;
+//                array.add(rs.getString("idTask"));
+//                array.add(rs.getString("name"));
+//                array.add(rs.getString("Date"));
+//                array.add(rs.getString("idCategory1"));
+
             }
+            return array;
         } catch (SQLException e) {
             e.printStackTrace();
         }

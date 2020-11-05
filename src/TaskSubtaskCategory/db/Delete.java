@@ -1,23 +1,24 @@
 package TaskSubtaskCategory.db;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Delete {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
 
+        task(1);
+    }
+
+    public static void task(long id) throws SQLException {
         String url = "jdbc:mysql://localhost:3306/calendar";
         String user = "root";
         String password = "root";
 
-        try {
-            Connection conn = DriverManager.getConnection(url,user,password);
-            Statement stmt = conn.createStatement();
-            stmt.executeUpdate("delete from task" + " where idTask = 2");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
+        Connection conn = DriverManager.getConnection(url,user,password);
+        PreparedStatement statement = conn.prepareStatement("delete from task" + " where idTask = ?");
+        statement.setLong(1, id);
+        statement.executeUpdate();
+//        conn.close();????????
+
     }
 }
