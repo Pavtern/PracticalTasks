@@ -35,13 +35,16 @@ public class Main {
                     SelectArray.get();
                     break;
                 case "2":
-                    Insert.set();
+                    Insert.set(readString(1),readString(2),readId(2));
                     break;
                 case "3":
-                    Update.update(readId(), readString());
+                    Update.update(readId(1), readString(1));
                     break;
                 case "4":
-                    Delete.task(readId());
+                    Delete.task(readId(1));
+                    break;
+                case "5":
+                    System.out.println("Bye!");
                     break;
                 default:
                     System.out.println("Unknown command: " + command);
@@ -49,8 +52,11 @@ public class Main {
         }
     }
 
-    private static long readId() {
-        System.out.println("Which id?");
+    private static long readId(int n) {
+        if (n == 1){
+        System.out.println("Which ID?");}
+        else {
+            System.out.println("Which category ID?");}
         String id = new Scanner(System.in).nextLine();
         long parsedId = -1;
         try {
@@ -60,8 +66,11 @@ public class Main {
         }
         return parsedId;
     }
-    private static String readString() {
-        System.out.println("Insert new name:");
+    private static String readString(int n) {
+        if (n == 1){
+        System.out.println("Insert new name:");}
+        else {
+            System.out.println("Insert the date:");}
         Scanner in = new Scanner(System.in);
         String CategoryName = in.nextLine();
         return CategoryName;
