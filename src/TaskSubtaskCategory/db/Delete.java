@@ -5,7 +5,7 @@ import java.sql.*;
 public class Delete {
     public static void main(String[] args) throws SQLException {
 
-        task(1);
+        task(5);
     }
 
     public static void task(long id) throws SQLException {
@@ -17,7 +17,9 @@ public class Delete {
         Connection conn = DriverManager.getConnection(url,user,password);
         PreparedStatement statement = conn.prepareStatement("delete from task" + " where idTask = ?");
         statement.setLong(1, id);
-        statement.executeUpdate();
+        int count = statement.executeUpdate();
+
+        System.out.println ("Number of rows affected: " + count);
 //        conn.close();????????
 
     }

@@ -18,6 +18,8 @@ public class Insert {
         statement.setString(1, name);
         statement.setString(2, date);
         statement.setLong(3, id);
-        statement.executeUpdate();
+        int count = statement.executeUpdate();
+
+        System.out.println ("Number of rows affected: " + count);
     }
 }

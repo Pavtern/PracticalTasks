@@ -18,6 +18,8 @@ public class Update {
         PreparedStatement statement = conn.prepareStatement("update task" + " set name = ?" + "where idTask = ?");
         statement.setString(1, name);
         statement.setLong(2, id);
-        statement.executeUpdate();
+        int count = statement.executeUpdate();
+
+        System.out.println ("Number of rows affected: " + count);
     }
 }
