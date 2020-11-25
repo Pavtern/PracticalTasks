@@ -4,7 +4,6 @@ import java.sql.*;
 
 public class Delete {
     public static void main(String[] args) throws SQLException {
-
         task(5);
     }
 
@@ -12,8 +11,6 @@ public class Delete {
         String url = "jdbc:mysql://localhost:3306/calendar";
         String user = "root";
         String password = "root";
-
-
 
         Connection conn = DriverManager.getConnection(url,user,password);
         PreparedStatement ps = conn.prepareStatement("select * from calendar.task WHERE idTask = ?");
