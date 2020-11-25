@@ -1,22 +1,23 @@
-package TaskSubtaskCategory.db;
+package Archive;
 
 import java.sql.*;
 
-public class Select {
+public class SelectR {
     public static void main(String[] args) throws SQLException {
-        get();
+        get(11);
 
     }
 
-    public static String get() throws SQLException{
+    public static String get(int id) throws SQLException{
         String url = "jdbc:mysql://localhost:3306/calendar";
         String user = "root";
         String password = "root";
 //        if id+
 
         Connection conn = DriverManager.getConnection(url, user, password);
-        Statement stmt = conn.createStatement();
-        ResultSet rs = stmt.executeQuery("select * from calendar.task");
+        PreparedStatement pstmt = conn.prepareStatement("select * from calendar.task WHERE idTask = ?");
+        pstmt.setInt(1, id);
+        ResultSet rs = pstmt.executeQuery();
 
         System.out.printf("%-15s%-22s%-22s%-22s\n", "idTask", "Name", "Date", "IdCategory");
 

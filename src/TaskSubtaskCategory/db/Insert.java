@@ -20,6 +20,6 @@ public class Insert {
         statement.setLong(3, id);
         int count = statement.executeUpdate();
 
-        System.out.println ("Number of rows affected: " + count);
+        System.out.println ("Number of rows created: " + count);
     }
 }

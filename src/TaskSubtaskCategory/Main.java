@@ -1,9 +1,6 @@
 package TaskSubtaskCategory;
 
-import TaskSubtaskCategory.db.Delete;
-import TaskSubtaskCategory.db.Insert;
-import TaskSubtaskCategory.db.SelectArray;
-import TaskSubtaskCategory.db.Update;
+import TaskSubtaskCategory.db.*;
 
 import java.util.Scanner;
 
@@ -32,7 +29,7 @@ public class Main {
 
             switch (command){
                 case "1":
-                    SelectArray.get();
+                    Select.get();
                     break;
                 case "2":
                     Insert.set(readString(1),readString(2),readId(2));
@@ -70,7 +67,7 @@ public class Main {
         if (n == 1){
         System.out.println("Insert new name:");}
         else {
-            System.out.println("Insert the date:");}
+            System.out.println("Insert the date (YYYY.MM.DD):");}
         Scanner in = new Scanner(System.in);
         String CategoryName = in.nextLine();
         return CategoryName;
