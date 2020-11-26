@@ -9,17 +9,14 @@ public class Insert {
     }
 
     public static void set(String name, String date, long id) throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/calendar";
-        String user = "root";
-        String password = "root";
 
-        Connection conn = DriverManager.getConnection(url,user,password);
+        Connection conn = Conn.getConnection();
         PreparedStatement statement = conn.prepareStatement("insert into task" + "(name,date,idCategory1)" + "values(?,?,?)");
         statement.setString(1, name);
         statement.setString(2, date);
         statement.setLong(3, id);
         int count = statement.executeUpdate();
-
+        Conn.close(conn);
         System.out.println ("Number of rows created: " + count);
     }
 }

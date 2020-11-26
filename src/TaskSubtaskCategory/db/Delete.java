@@ -29,10 +29,10 @@ public class Delete {
         PreparedStatement statement = conn.prepareStatement("delete from task" + " where idTask = ?");
         statement.setLong(1, id);
         int count = statement.executeUpdate();
-
-        System.out.println ("Number of rows affected: " + count);
+        Conn.close(conn);
+        System.out.println("Number of rows affected: " + count);
 //        conn.close();????????
 
     }
 }
-//111111111111
+//1111111111119

@@ -9,12 +9,7 @@ public class Select {
     }
 
     public static String get() throws SQLException{
-        String url = "jdbc:mysql://localhost:3306/calendar";
-        String user = "root";
-        String password = "root";
-//        if id+
-
-        Connection conn = DriverManager.getConnection(url, user, password);
+        Connection conn = Conn.getConnection();
         Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery("select * from calendar.task");
 
@@ -27,6 +22,7 @@ public class Select {
                     rs.getString("Date"),
                     rs.getString("idCategory1"));
         }
+        Conn.close(conn);
         return ".";
     }
 }
