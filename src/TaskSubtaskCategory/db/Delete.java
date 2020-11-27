@@ -4,15 +4,12 @@ import java.sql.*;
 
 public class Delete {
     public static void main(String[] args) throws SQLException {
+
         task(5);
     }
 
     public static void task(long id) throws SQLException {
-        String url = "jdbc:mysql://localhost:3306/calendar";
-        String user = "root";
-        String password = "root";
-
-        Connection conn = DriverManager.getConnection(url,user,password);
+        Connection conn = Conn.getConnection();
         PreparedStatement ps = conn.prepareStatement("select * from calendar.task WHERE idTask = ?");
         ps.setLong(1, id);
         ResultSet rs = ps.executeQuery();
